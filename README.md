@@ -4,4 +4,4 @@ Parcial 3 - Práctica 1
 
 [Pages](https://josejuliojim.github.io/DOM/)
 
-[JavaScript](index.html)
+[JavaScript](dom.js)
