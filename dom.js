@@ -50,3 +50,54 @@ console.log($h2.style);
 $h2.style.color = "rgb(8, 2, 163)";
 $h2.style.backgroundColor = "rgb(255, 118, 118)";
 $h2.style.fontSize = "36px"
+
+function darkmode()
+{
+    document.body.style.backgroundColor = "rgb(32, 32, 32)";
+}
+
+const btnPush = document.querySelector("button");
+btnPush.addEventListener("click", darkmode)
+
+function lightmode()
+{
+    document.body.style.backgroundColor = "white";
+}
+
+const btnPush2 = document.getElementById("btnPush2");
+btnPush2.addEventListener("click", lightmode);
+
+function deactivateDrk()
+{
+    $ul.style.backgroundColor = "rgb(32, 32, 32)";
+    $ol.style.backgroundColor = "rgb(32, 32, 32)";
+    $h1.style.backgroundColor = "rgb(32, 32, 32)";
+    $h2.style.backgroundColor = "rgb(32, 32, 32)";
+    $p.style.backgroundColor = "rgb(32, 32, 32";
+}
+
+//const RedPage = document.getElementById("redPage");
+//RedPage.addEventListener("click", deactivateDrk);
+const redPage= document.getElementsByClassName("redPage");
+Array.prototype.forEach.call(redPage, function(el) {
+    // Do stuff here
+    el.addEventListener("click", deactivateDrk);
+});
+
+function deactivateLgt()
+{
+    $ul.style.backgroundColor = "white";
+    $ol.style.backgroundColor = "white";
+    $h1.style.backgroundColor = "white";
+    $h2.style.backgroundColor = "white";
+    $p.style.backgroundColor = "white";
+}
+
+//const WhitePage = document.querySelector(".whitePage");
+//WhitePage.addEventListener("click", deactivateLgt);
+
+const whitePage = document.getElementsByClassName("WhitePage");
+Array.prototype.forEach.call(whitePage, function(el) {
+    // Do stuff here
+    el.addEventListener("click", deactivateLgt);
+});
